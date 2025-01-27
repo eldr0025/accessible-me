@@ -5,6 +5,14 @@ body {
   padding: 0;
 }
 
+a:focus {
+  outline: 4px solid red;
+}
+
+a:hover {
+  background-color: darkgray;
+}
+
 h1,
 h2,
 h3,
@@ -22,6 +30,11 @@ h6 {
 
 img {
   width: 100%;
+}
+
+.main-nav {
+  margin-bottom: 20px;
+  border-right: ;
 }
 
 .main-nav ul {
