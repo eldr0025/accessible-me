@@ -13,73 +13,77 @@
   </head>
 
   <body>
-      <header>
-          <div class="site-header">
+      <header role="banner" itemscope itemtype="https://schema.org/Organization">
+        <a href="#main" class="skiplink" role="link">Skip to main content</a>
+        <a href="#top" role="link"></a>
             <div class="main-nav">
-              <h1>Jam Box Studios</h1>
-                <div class="nav-list">
-                  <nav>
-                    <ul>
-                      <li><a href="#">Home</a></li>
-                      <li><a href="#">Products</a></li>
-                      <li><a href="#">Reservation</a></li>
-                      <li><a href="#">Studio</a></li>
-                    </ul>
-                  </nav>
-                </div>
+              <h1 itemprop="name" role="heading" aria-level="1">Jam Box Studios</h1>
+              <nav role="navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
+                <ul role="list">
+                  <li><a href="#" itemprop="url" role="link"><span itemprop="name">Home</span></a></li>
+                  <li><a href="#" itemprop="url" role="link"><span itemprop="name">Products</span></a></li>
+                  <li><a href="#" itemprop="url" role="link"><span itemprop="name">Reservation</span></a></li>
+                  <li><a href="#" itemprop="url" role="link"><span itemprop="name">Studio</span></a></li>
+                </ul>
+              </nav>
             </div>
-              <img src="https://picsum.photos/1200/900" alt="banner photo" class="banner">
-          </div>
+            <img src="https://picsum.photos/1200/900" alt="banner photo" class="banner" itemprop="contentUrl">
       </header>
       
-      <main>
-        <div class="container">
-          <div class="main-content">
-            <h2>Welcome to Jam Box</h2>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus laboriosam praesentium nostrum ipsa eveniet, officia deserunt cumque eius esse enim, ipsam accusantium autem nihil quaerat sequi perferendis optio quia veritatis.</p>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam perferendis expedita sed itaque odit ipsam omnis, eos voluptates magni fugit culpa voluptatibus, inventore eaque, eligendi voluptatum! Voluptate iusto error voluptatibus.</p>
+      <main id="main" role="main">
+        <article class="main-content" role="article" itemscope itemtype="https://schema.org/Article">
+          <div class="container">
+            <h2 class="welcoming-header" role="heading" aria-level="2" itemprop="headline">Welcome to Jam Box</h2>
+            <p itemprop="articleBody">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus laboriosam praesentium nostrum ipsa eveniet, officia deserunt cumque eius esse enim, ipsam accusantium autem nihil quaerat sequi perferendis optio quia veritatis.</p>
+            <p itemprop="articleBody">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam perferendis expedita sed itaque odit ipsam omnis, eos voluptates magni fugit culpa voluptatibus, inventore eaque, eligendi voluptatum! Voluptate iusto error voluptatibus.</p>
             
-            <div class="owner">
-              <h2>Meet the owner</h2>
+            <div class="owner" itemscope itemtype="https://schema.org/Person">
+              <h2 role="heading" aria-level="2">Meet the owner</h2>
               <ul>
-                <li>Name: John Doe</li>
-                <li>Title: CEO</li>
-                <li>Email: johnjoe@jambox.ca</li>
-                <li>Phone: 613-000-0000</li>
+                <li itemprop="name">Name: John Doe</li>
+                <li itemprop="jobTitle">Title: CEO</li>
+                <li itemprop="email">Email: johnjoe@jambox.ca</li>
+                <li itemprop="telephone">Phone: 613-000-0000</li>
               </ul>
             </div>
             
-            <div class="address">
-              <h2>Address</h2>
+            <div class="address" itemscope itemtype="https://schema.org/PostalAddress">
+              <h2 role="heading" aria-level="2">Address</h2>
               <ul>
-                <li>Jambox Studios</li>
-                <li>123 Guitar Road,</li>
-                <li>Musicville, Danceistan</li>
-                <li>B3T 0L0</li>
+                <li itemprop="name">Jambox Studios</li>
+                <li itemprop="streetAddress">123 Guitar Road,</li>
+                <li itemprop="addressRegion">Musicville, Danceistan</li>
+                <li itemprop="postalCode">B3T 0L0</li>
               </ul>
             </div>
             
-            <div class="contact-section">
-              <h2>Contact Us</h2>
-              <form action="thanks.html">
-                <label>Enter Info</label>
-                <input type="text" placeholder="Full Name">
-                <input type="text" placeholder="Email">
-                <input type="text" placeholder="Subject">
-                <label>Your Message</label>
-                <textarea placeholder="Message"></textarea>
-                <button type="submit">Send</button>
-              </form>
+            <div class="contact-section" itemscope itemtype="https://schema.org/ContactPoint">
+              <h2 role="heading" aria-level="2">Contact Us</h2>
+              <form action="thanks.html" role="form">
+                <label for="fname">Full Name</label> 
+                <input type="text" name="fname" id="fname" itemprop="name"> 
+
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email" itemprop="email">
+
+                <label for="subject">Subject</label>
+                <input type="text" name="subject" id="subject">
+            
+                <label for="message">Message</label>
+                <textarea name="message" id="message"></textarea>
+          
+                <button type="submit" role="button" itemprop="url">Send</button>
+              </form> 
+
+              <a href="#top" class="back-to-top">Back to top</a>
             </div>
           </div>
-        </div>
+        </article>
       </main>
       
-      <footer>
+      <footer role="contentinfo" itemscope itemtype="https://schema.org/CreativeWork">
         <div class="container">
-          <div class="site-footer">
-            <p>&copy; 2021 Jam Box Studios</p>
-          </div>
+            <p>&copy; 2021 Jam Box Studios</p itemprop="author">
         </div>
       </footer>
   </body>

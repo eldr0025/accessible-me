@@ -1,16 +1,46 @@
 body {
   font-family: 'Roboto', Helvetica, sans-serif;
-  background-color: grey;
+  background-color: #EDEDED;
   margin: 0;
   padding: 0;
 }
 
 a:focus {
-  outline: 4px solid red;
+  outline: 4px solid darkred;
 }
 
 a:hover {
-  background-color: darkgray;
+  background-color: #595959;
+  color: white;
+}
+
+.skiplink {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  background-color: #FF6047;
+  color: black;
+}
+
+.skiplink:focus {
+  position: static;
+  width: auto;
+  height: auto;
+}
+
+.back-to-top {
+  color: black;
+  outline: 2px solid black;
+  text-decoration: none;
+  padding: 5px;
+}
+
+.back-to-top:hover {
+  background-color: #595959;
+  color: white;
 }
 
 h1,
@@ -41,7 +71,6 @@ img {
 .main-nav {
   background-color: #222;
   margin-top: -22px;
-  padding-bottom: 20px;
 }
 
 .main-nav ul {
@@ -84,6 +113,10 @@ img {
   color: white;
 }
 
+.welcoming-header {
+  font-size: 1.8rem;
+}
+
 .owner ul li {
   list-style-type: none;
   line-height: 25px;
@@ -114,12 +147,14 @@ form button {
   border: 2px solid black;
   padding: 1rem;
   text-transform: uppercase;
+  margin-bottom: 20px;
 }
 
 button:hover {
-  background-color: darkgray;
+  background-color: #595959;
+  color: white;
 }
 
-.site-footer {
+footer {
   padding: 2rem 0;
 }
